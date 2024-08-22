@@ -22,6 +22,6 @@ A landing page for an AI SaaS website built with NextJS, Tailwind and Framer Mot
 - Tailwind
 - Framer Motion
 
-## Reference Tutorial
+## Reference
 https://www.youtube.com/watch?v=Z7I5uSRHMHg
 >>>>>>> a79cbae (Update README.md)
