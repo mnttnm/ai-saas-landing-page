@@ -103,7 +103,7 @@ export const FeatureTab = (
 
     animate(xPosition, [0, 100, 100, 0, 0], animationOptions);
     animate(yPosition, [0, 0, 100, 100, 0], animationOptions);
-  }, [props.selected]);
+  }, [props.selected, tabRef, xPosition, yPosition]);
 
   return (
     <div

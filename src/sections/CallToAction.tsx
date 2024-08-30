@@ -1,28 +1,41 @@
 'use client';
-import { useMotionValue, motion, useMotionTemplate, useTransform, useScroll } from "framer-motion";
+
+import {
+  useMotionValue,
+  motion,
+  useMotionTemplate,
+  useTransform,
+  useScroll,
+} from "framer-motion";
 import { Button } from "@/components/Button";
 import starBG from "@/assets/stars.png";
 import gridLinesBG from "@/assets/grid-lines.png";
-import { RefObject, useEffect, useRef, useState } from "react";
+import {
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
-const useMousePositionRelative = (to:RefObject<HTMLDivElement>) => {  
+const useMousePositionRelative = (to: RefObject<HTMLDivElement>) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const onMouseMove = (event: MouseEvent) => {
-    if (!to.current) return;
-    const { top, left } = to.current?.getBoundingClientRect();
-    x.set(event.clientX - left);
-    y.set(event.clientY - top);
-  };
-
   useEffect(() => {
-      window.addEventListener("mousemove", onMouseMove);
-    
-    return () => {
-        window.removeEventListener("mousemove", onMouseMove);
+    const onMouseMove = (event: MouseEvent) => {
+      if (!to.current) return;
+      const { top, left } = to.current?.getBoundingClientRect();
+      x.set(event.clientX - left);
+      y.set(event.clientY - top);
     };
-  }, []);
+
+    window.addEventListener("mousemove", onMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+    };
+  }, [to, x, y]);
 
   console.log(x, y);
 

@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+:root{
+  /* Collection: Typography Primitives */
+
+  /* Mode: Default */
+  --Family-Sans: Inter;
+  --Family-Serif: Noto Serif;
+  --Family-Mono: Roboto Mono;
+  --Scale-01: 12;
+  --Scale-02: 14;
+  --Scale-03: 16;
+  --Scale-04: 20;
+  --Scale-05: 24;
+  --Scale-06: 32;
+  --Scale-07: 40;
+  --Scale-08: 48;
+  --Scale-09: 64;
+  --Scale-10: 72;
+  --Weight-Thin: 100;
+  --Weight-Thin-Italic: Thin Italic;
+  --Weight-Extra-Light: 200;
+  --Weight-Extralight-Italic: Extra Light Italic;
+  --Weight-Light: 300;
+  --Weight-Light-Italic: Light Italic;
+  --Weight-Regular: 400;
+  --Weight-Regular-Italic: Italic;
+  --Weight-Medium: 500;
+  --Weight-Medium-Italic: Medium Italic;
+  --Weight-Semibold: 600;
+  --Weight-Semibold-Italic: Semi Bold Italic;
+  --Weight-Bold: 700;
+  --Weight-Bold-Italic: Bold Italic;
+  --Weight-Extra-Bold: 800;
+  --Weight-Extra-Bold-Italic: Extra Bold Italic;
+  --Weight-Black: 900;
+  --Weight-Black-Italic: Black Italic;
+}

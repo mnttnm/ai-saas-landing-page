@@ -57,14 +57,17 @@ export const Testimonials = () => {
           </h1>
           <p className="text-center mt-5 text-white/70 max-w-sm mx-auto text-lg md:text-xl tracking-tight">
             Our revolutionary AI SEO tools have transformed our
-            clients' strategies.
+            clients&apos; strategies
           </p>
         </header>
         <div
           className="flex mt-10 overflow-hidden 
         [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]"
         >
-          <motion.div className="flex flex-none gap-5 pr-5" style={{ translateX }}>
+          <motion.div
+            className="flex flex-none gap-5 pr-5"
+            style={{ translateX }}
+          >
             {[...testimonials, ...testimonials].map((item, index) => (
               <div
                 className="max-w-xs md:max-w-md md:p-10 flex-none border border-white/15 rounded-xl p-6 bg-[linear-gradient(to_bottom_left,rgba(140,69,255,.3),black)]"

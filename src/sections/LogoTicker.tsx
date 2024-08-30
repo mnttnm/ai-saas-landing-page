@@ -7,7 +7,7 @@ import quantumLogo from "@/assets/logo-quantum.png";
 import pulseLogo from "@/assets/logo-pulse.png";
 import echoLogo from "@/assets/logo-echo.png";
 import {motion} from "framer-motion"
-
+import Image from "next/image";
 
 export const LogoTicker = () => {
   return (
@@ -21,14 +21,13 @@ export const LogoTicker = () => {
             animate={{
               x: ["0%", "-50%"],
             }}
-            transition={
-              {
-                repeat: Infinity,
-                duration: 20,
-                ease: "linear",
-              }
-            }
-            className="flex flex-none gap-14 pr-14">
+            transition={{
+              repeat: Infinity,
+              duration: 20,
+              ease: "linear",
+            }}
+            className="flex flex-none gap-14 pr-14"
+          >
             {[
               acmeLogo,
               apexLogo,
@@ -43,11 +42,13 @@ export const LogoTicker = () => {
               pulseLogo,
               echoLogo,
             ].map((logo, index) => (
-              <img
+              <Image
                 key={index}
                 src={logo.src}
                 alt="logo"
                 className="h-6 w-auto"
+                width={logo.width}
+                height={logo.height}
               />
             ))}
           </motion.div>
